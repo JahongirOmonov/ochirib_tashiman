@@ -6,11 +6,12 @@
 
 .span-color-in-user
 {
-    color: blue;
+    color: yellow;
 }
+
 
 .span-hover-in-user:hover
 {
-    color: lightseagreen;
+    color: black;
 }
 

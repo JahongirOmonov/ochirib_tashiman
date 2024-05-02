@@ -125,6 +125,8 @@
             0 0 10px yellow;
 }
 
+
+
 .tovuqq{
     font-family: Times New Roman;
     border: 2px solid red;
@@ -168,6 +170,23 @@
     border: 2px solid #007f7f;
     border-radius: 10px;
 
+}
+
+.borderim {
+    border: 2px solid red;
+    padding: 5px;
+    border-radius: 10px;
+    margin-right: 10px;
+    box-shadow:
+            0 0 10px #00FF7F,
+            0 0 10px #00FF7F,
+            0 0 10px #00FF7F,
+            0 0 10px #00FF7F;
+}
+
+.borderim:hover {
+    background-color: lime;
+    transition: 0.3s ease-in;
 }
 
 

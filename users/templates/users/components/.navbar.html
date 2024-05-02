@@ -3,7 +3,14 @@
 <li class="nav-item hover-panel">
     <a class="nav-link active" href="{% url 'journal:main_page' %}">
         <i style="color: red" class="fa-solid fa-house fs-4"></i>
+        {% get_current_language as LANGUAGE_CODE %}
+        {% if LANGUAGE_CODE == "uz" %}
         <span class="span-color-always">{% blocktrans %}Asosiy{% endblocktrans %}</span>
+        {% elif LANGUAGE_CODE == "en" %}
+        <span class="span-color-always">{% blocktrans %}Main{% endblocktrans %}</span>
+        {% elif LANGUAGE_CODE == "ru" %}
+        <span class="span-color-always">{% blocktrans %}Основной{% endblocktrans %}</span>
+        {% endif %}
     </a>
 </li>
 <li class="nav-item hover-panel">
@@ -33,7 +40,14 @@
 <li class="nav-item hover-panel">
     <a class="nav-link active" aria-current="page" href="{% url 'journal:booking_article' %}">
         <i style="color: red" class=" fa-regular fa-pen-to-square fs-4"></i>
+        {% get_current_language as LANGUAGE_CODE %}
+        {% if LANGUAGE_CODE == "uz" %}
         <span class="span-color-always">{% blocktrans %}Maqola yuborish{% endblocktrans %}</span>
+        {% elif LANGUAGE_CODE == "en" %}
+        <span class="span-color-always">{% blocktrans %}Sending article{% endblocktrans %}</span>
+        {% elif LANGUAGE_CODE == "ru" %}
+        <span class="span-color-always">{% blocktrans %}Отправка статьи{% endblocktrans %}</span>
+        {% endif %}
     </a>
 </li>
 <li class="nav-item hover-panel">

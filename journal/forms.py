@@ -188,11 +188,23 @@ class EditorialForm(forms.ModelForm):
 class AboutForm(forms.ModelForm):
     class Meta:
         model = About
-        fields = ('content','content_uz', 'content_en', 'content_ru',
-                  'journal_name', 'journal_image',
+        fields = ('journal_name', 'journal_name_uz', 'journal_name_en', 'journal_name_ru', 'content', 'content_uz', 'content_en', 'content_ru',
+                   'journal_image',
                   'author_description', 'author_description_uz', 'author_description_en', 'author_description_ru', 'author_image')
 
         widgets = {
+            'journal_name': forms.TextInput(attrs={
+                'class': 'form-control', 'placeholder': 'Sarlavha',
+            }),
+            'journal_name_uz': forms.TextInput(attrs={
+                'class': 'form-control', 'placeholder': 'Sarlavha_uz',
+            }),
+            'journal_name_en': forms.TextInput(attrs={
+                'class': 'form-control', 'placeholder': 'Sarlavha_en',
+            }),
+            'journal_name_ru': forms.TextInput(attrs={
+                'class': 'form-control', 'placeholder': 'Sarlavha_ru',
+            }),
             'content': forms.Textarea(attrs={
                 'class': 'mb-4 mt-1 form-control', 'placeholder': 'Content',
             }),
@@ -204,9 +216,6 @@ class AboutForm(forms.ModelForm):
             }),
             'content_ru': forms.Textarea(attrs={
                 'class': 'mb-4 mt-1 form-control', 'placeholder': 'Content_ru',
-            }),
-            'journal_name': forms.TextInput(attrs={
-                'class': 'form-control', 'placeholder': 'Sarlavha',
             }),
             'journal_image': forms.FileInput(attrs={
                 'class': 'form-control', 'placeholder': 'Rasm',

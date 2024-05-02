@@ -15,7 +15,7 @@ class PostTranslationOptions(TranslationOptions):
 
 @register(About)
 class AboutTranslationOptions(TranslationOptions):
-    fields = ('content', 'author_description')
+    fields = ('journal_name', 'content', 'author_description')
 
 
 @register(Editorial)
