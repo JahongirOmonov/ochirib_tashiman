@@ -1,0 +1,45 @@
+{% load static %}
+{% load i18n %}
+
+<li class="nav-item fornow" >
+    <a class="nav-link active" href="{% url 'journal:main_page' %}">
+        <i style="color: red" class="fa-solid fa-house fs-4"></i>
+        <span class="span-color-always2">{% blocktrans %}Asosiy{% endblocktrans %}</span>
+    </a>
+</li>
+<li class="nav-item fornow" >
+    <a class="nav-link active" aria-current="page" href="{% url 'journal:post_list' %}">
+        <i class="fa-regular fa-newspaper fs-4" style="color: red"></i>
+        <span class="span-color-always2">{% blocktrans %}Yangiliklar{% endblocktrans %}</span>
+    </a>
+</li>
+<li class="nav-item fornow" >
+    <a class="nav-link active" aria-current="page" href="{% url 'journal:article_list' %}">
+        <i style="color: red" class="fa-solid fa-book-journal-whills fs-4"></i>
+        <span class="span-color-always2">{% blocktrans %}Maqolalar{% endblocktrans %}</span>
+    </a>
+</li>
+<li class="nav-item fornow" >
+    <a class="nav-link active" aria-current="page" href="{% url 'journal:contact' %}">
+        <i style="color: red" class=" fa-regular fa-address-book fs-4"></i>
+        <span class="span-color-always2">{% blocktrans %}Bog'lanish{% endblocktrans %}</span>
+    </a>
+</li>
+<li class="nav-item fornow" >
+    <a class="nav-link active" aria-current="page" href="{% url 'journal:journal_list' %}">
+        <i style="color: red" class=" fa-regular fa-folder-open fs-4"></i>
+        <span class="span-color-always2">{% blocktrans %}Arxiv{% endblocktrans %}</span>
+    </a>
+</li>
+<li class="nav-item fornow" >
+    <a class="nav-link active" aria-current="page" href="{% url 'journal:about_journal' %}">
+        <i style="color: red" class=" fa-solid fa-circle-info fs-4"></i>
+        <span class="span-color-always2">{% blocktrans %}Jurnal haqida{% endblocktrans %}</span>
+    </a>
+</li>
+<li class="nav-item fornow" >
+    <a class="nav-link active" aria-current="page" href="{% url 'journal:booking_article' %}">
+        <i style="color: red" class=" fa-regular fa-pen-to-square fs-4"></i>
+        <span class="span-color-always2">{% blocktrans %}Maqola yuborish{% endblocktrans %}</span>
+    </a>
+</li>

@@ -1,0 +1,96 @@
+{% load static %}
+{% load i18n %}
+{% load journal_tags %}
+
+<li class="fornow">
+    <a href="{% url 'journal:article_create' %}" class="nav-link" style="color: blue;">
+        <i class="fa-regular fa-plus fs-3"></i>
+        <span class="span-hover-in-user span-color-in-user" style="font-size: larger">
+
+                        {% blocktrans %}Maqola yozish{% endblocktrans %}
+                    </span>
+    </a>
+</li>
+<li class="fornow">
+    <a href="{% url 'journal:post_create' %}" class="nav-link" style="color: blue;">
+        <i class="fa-regular fa-plus fs-3"></i>
+        <span class="span-hover-in-user span-color-in-user" style="font-size: larger">
+                        {% blocktrans %}Yangilik qo'shish{% endblocktrans %}
+                    </span>
+    </a>
+</li>
+<li class="fornow">
+    <a href="{% url 'journal:journal_create' %}" class="nav-link" style="color: blue;">
+        <i class="fa-regular fa-plus fs-3"></i>
+        <span class="span-hover-in-user span-color-in-user" style="font-size: larger">
+                        {% blocktrans %}Jurnal qo'shish{% endblocktrans %}
+                    </span>
+    </a>
+</li>
+<li class="fornow">
+    <a href="{% url 'journal:editorial_create' %}" class="nav-link" style="color: blue;">
+        <i class="fa-regular fa-plus fs-3"></i>
+        <span class="span-hover-in-user span-color-in-user" style="font-size: larger">
+                        {% blocktrans %}Tahrirlovchi qo'shish{% endblocktrans %}
+                    </span>
+    </a>
+</li>
+<li class="fornow">
+    <a href="{% url 'journal:about_article_update' id=1 %}" class="nav-link" style="color: blue;">
+        <i class="fa-regular fa-plus fs-3"></i>
+        <span class="span-hover-in-user span-color-in-user" style="font-size: larger">
+                        {% blocktrans %}Jurnal haqidani o'zgartirish{% endblocktrans %}
+                    </span>
+    </a>
+</li>
+<li class="fornow">
+    <a href="{% url 'journal:sending_article_update' id=1 %}" class="nav-link" style="color: blue;">
+        <i class="fa-regular fa-plus fs-3"></i>
+        <span class="span-hover-in-user span-color-in-user" style="font-size: larger">
+                        {% blocktrans %}Ma'qola yuborishni o'zgartirish{% endblocktrans %}
+                    </span>
+    </a>
+</li>
+<li class="fornow">
+    <a href="{% url 'journal:social_media_create' %}" class="nav-link" style="color: blue;">
+        <i class="fa-regular fa-plus fs-3"></i>
+        <span class="span-hover-in-user span-color-in-user" style="font-size: larger">
+                        {% blocktrans %}Ijtimoiy tarmoq qo'shish{% endblocktrans %}
+                    </span>
+    </a>
+</li>
+<li class="fornow">
+    <a href="{% url 'journal:social_media_list' %}" class="nav-link" style="color: blue;">
+        <i class="fa-solid fa-hashtag fs-3"></i>
+        <span class="span-hover-in-user span-color-in-user" style="font-size: larger">
+
+                        {% blocktrans %}Ijtimoiy tarmoqlar{% endblocktrans %}
+                    </span>
+    </a>
+</li>
+{% get_messages_count as count %}
+<li class="fornow">
+    <a href="{% url 'journal:message_list' %}" class="nav-link" style="color: blue;">
+        <i class="fa-solid fa-comment-sms fs-3"></i>
+        <span class="span-hover-in-user span-color-in-user" style="font-size: larger">
+                        {% blocktrans %}Xabarlar{% endblocktrans %}
+            {% if count != 0 %}
+            <span class="badge text-bg-primary rounded-pill ms-4">
+                    {{ count }}
+            </span>
+            {% endif %}
+                    </span>
+
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
